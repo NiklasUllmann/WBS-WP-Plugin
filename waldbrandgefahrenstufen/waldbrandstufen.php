@@ -5,7 +5,7 @@ Plugin URI: http://wbs.niklas-ullmann.de/
 Description: Zeigt die Waldbrandgefahrenstufe für jede Stadt in deutschland an und informiert somit die Bevölkerung und kann dadurch präventiv Waldbrände verhindern
 Version: 1.0.0
 Author: Niklas Ullmann
-Author URI: http://wbs.niklas-ullmann.de/
+Author URI: https://niklas-ullmann.de/
 */
 
 // Exit if accessed directly
