@@ -68,29 +68,3 @@ In Germany, there is a mess of responsibilities for the forest fire levels of so
 = 1.0.0 =
 Everthing works now! :)
 
-
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](https://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: https://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`

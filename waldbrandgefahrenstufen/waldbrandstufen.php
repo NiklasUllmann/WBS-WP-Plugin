@@ -18,9 +18,9 @@ require_once(plugin_dir_path(__FILE__) . '/includes/waldbrandgefahrenstufen-scri
 require_once(plugin_dir_path(__FILE__) . '/includes/waldbrandgefahrenstufen-class.php');
 
 
-function register_wbs_widget()
+function wbs_register_wbs_widget()
 {
     register_widget("Waldbrandgefahrenstufen_Widget");
 }
 
-add_action("widgets_init", "register_wbs_widget");
+add_action("widgets_init", "wbs_register_wbs_widget");
