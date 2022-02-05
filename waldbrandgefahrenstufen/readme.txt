@@ -1,10 +1,10 @@
 === Waldbrandgefahrenstufen ===
 Contributors: niklasullmann
-Donate link: http://wbs.niklas-ullmann.de/
+Donate link: http://fire-technology.info
 Tags: information, waldbrandgefahr, germany, forest fires, stable
 Requires at least: 4.7
-Tested up to: 5.8
-Stable tag: 1.0.0
+Tested up to: 5.9
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -58,12 +58,18 @@ In Germany, there is a mess of responsibilities for the forest fire levels of so
 
 == Changelog ==
 
+= 1.0.1 =
+* Support APIKeys
+
 = 1.0.0 =
 * First stable release
 * Works with every city in Germany
 * Proposed 3 designtemplates
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Please enter your APIKey
 
 = 1.0.0 =
 Everthing works now! :)

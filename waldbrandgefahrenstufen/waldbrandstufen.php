@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Waldbrandgefahrenstufen
-Plugin URI: http://wbs.niklas-ullmann.de/
+Plugin URI: http://fire-technology.info
 Description: Zeigt die Waldbrandgefahrenstufe für jede Stadt in deutschland an und informiert somit die Bevölkerung und kann dadurch präventiv Waldbrände verhindern
-Version: 1.0.0
+Version: 1.0.1
 Author: Niklas Ullmann
 Author URI: https://niklas-ullmann.de/
 */

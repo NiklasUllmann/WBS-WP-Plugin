@@ -1,9 +1,11 @@
-async function fetchAsync(cityname) {
+async function fetchAsync(cityname, apiKey) {
   let response = await fetch(
     "https://wbs-service.niklas-ullmann.de/location/city?name=" + cityname,
     {
       method: "GET",
-      credentials: "omit",
+      headers: {
+        "x-api-key": apiKey,
+      }
     }
   );
   let data = await response;

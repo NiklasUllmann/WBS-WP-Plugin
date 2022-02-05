@@ -34,7 +34,7 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
 
         if ($instance['layout'] == 'default') {
             echo '<script>
-        fetchAsync("' . $instance['city'] . '")
+        fetchAsync("' . $instance['city'] . '", "'. $instance['apiKey'] .'")
   .then(
     (data) =>
       (document.getElementById("wbs1").innerHTML =
@@ -55,7 +55,7 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
         } elseif ($instance['layout'] == 'klein') {
 
             echo '<script>
-              fetchAsync("' . $instance['city'] . '")
+              fetchAsync("' . $instance['city'] . '", "'. $instance['apiKey'] .'")
                 .then(
                   (data) =>
                     (document.getElementById("wbs2").innerHTML =
@@ -75,7 +75,7 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
         } elseif ($instance['layout'] == 'ausf') {
 
             echo '<script>
-            fetchAsync("' . $instance['city'] . '")
+            fetchAsync("' . $instance['city'] . '", "'. $instance['apiKey'] .'")
     .then(
       (data) =>
         (document.getElementById("wbs1").innerHTML =
@@ -114,6 +114,7 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
         $title = !empty($instance['title']) ? $instance['title'] : esc_html__('Waldbrandgefahrenstufe:', 'wbs_domain');
         $city = !empty($instance['city']) ? $instance['city'] : esc_html__('Potsdam', 'wbs_domain');
         $layout = !empty($instance['layout']) ? $instance['layout'] : esc_html__('default', 'wbs_domain');
+        $apiKey = !empty($instance['apiKey']) ? $instance['apiKey'] : esc_html__('default', 'wbs_domain');
 
 ?>
         <!-- Titel -->
@@ -145,6 +146,19 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
                 </option>
             </select>
         </p>
+
+        <!-- Stadtname -->
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('apiKey')); ?>"><?php esc_attr_e('ApiKey:', 'wbs_domain'); ?></label>
+            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('apiKey')); ?>" name="<?php echo esc_attr($this->get_field_name('apiKey')); ?>" type="text" value="<?php echo esc_attr($apiKey); ?>">
+            <p>
+                <small>
+                    <a href="https://fire-technology.info/keyGenerator.html" target="_blank">
+                        <?php esc_attr_e('Hier können Sie kostenlos einen ApiKey beantragen', 'wbs_domain'); ?>
+                    </a>
+                </small>
+            </p>
+        </p>
 <?php
     }
 
@@ -166,6 +180,7 @@ class Waldbrandgefahrenstufen_Widget extends WP_Widget
 
         $instance['layout'] = (!empty($new_instance['layout'])) ? strip_tags($new_instance['layout']) : '';
 
+        $instance['apiKey'] = (!empty($new_instance['apiKey'])) ? strip_tags($new_instance['apiKey']) : '';
 
         return $instance;
     }
